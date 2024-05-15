@@ -1,0 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:news_app/features/home/home_screen.dart';
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/signup_screen.dart';
+import '../../features/news/presentation/screens/news_details_screen.dart';
+import '../../features/news/presentation/screens/news_screen.dart';
+import '../../features/splash/splash_screen.dart';
+import 'app_router.dart';
+part 'app_router_settings.dart';
+part 'page_navigator.dart';
+part 'navigator_key.dart';
