@@ -11,5 +11,6 @@ part 'solid_button.dart';
 part 'custom_text_button.dart';
 part 'loading_widget.dart';
 part 'no_data_found_widget.dart';
-part 'grid_placeholder_widget.dart';
+part 'image_placeholder_widget.dart';
 part 'text_field_widget.dart';
+part 'list_refresh_ndicator.dart';

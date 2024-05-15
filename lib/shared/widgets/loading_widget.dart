@@ -12,13 +12,13 @@ class LoadingWidget extends StatelessWidget {
         width: 28,
         child: kIsWeb || Platform.isAndroid
             ? CircularProgressIndicator(
-                color: color ?? AppColors.secondaryColor,
+                color: color ?? AppColors.primaryColor,
               )
             : Platform.isIOS
                 ? CupertinoActivityIndicator(
-                    color: color ?? AppColors.secondaryColor)
+                    color: color ?? AppColors.primaryColor)
                 : CircularProgressIndicator(
-                    color: color ?? AppColors.secondaryColor,
+                    color: color ?? AppColors.primaryColor,
                   ),
       ),
     );

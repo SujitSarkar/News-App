@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 List<NewsModel> newsModelFromJson(String str) =>
-    List<NewsModel>.from(json.decode(str).map((x) => NewsModel.fromJson(x)));
+    List<NewsModel>.from(json.decode(str).map((x) => NewsModel.fromMap(x)));
 
 String newsModelToJson(List<NewsModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -27,18 +27,31 @@ class NewsModel {
     this.content,
   });
 
-  factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
-        source: json["source"]["name"],
-        author: json["author"],
-        title: json["title"],
-        description: json["description"],
-        url: json["url"],
-        urlToImage: json["urlToImage"],
-        publishedAt: json["publishedAt"] == null
-            ? null
-            : DateTime.parse(json["publishedAt"]).millisecondsSinceEpoch,
-        content: json["content"],
-      );
+  factory NewsModel.fromMap(Map<String, dynamic> json) {
+    return NewsModel(
+      source: json["source"]["name"],
+      author: json["author"],
+      title: json["title"],
+      description: json["description"],
+      url: json["url"],
+      urlToImage: json["urlToImage"],
+      publishedAt: json["publishedAt"] == null
+          ? null
+          : DateTime.parse(json["publishedAt"]).millisecondsSinceEpoch,
+      content: json["content"],
+    );
+  }
+
+  Map<String, dynamic> toMap() => {
+        "source": source,
+        "author": author,
+        "title": title,
+        "description": description,
+        "url": url,
+        "urlToImage": urlToImage,
+        "publishedAt": publishedAt,
+        "content": content,
+      };
 
   Map<String, dynamic> toJson() => {
         "source": source,
