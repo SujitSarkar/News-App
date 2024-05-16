@@ -11,7 +11,7 @@ class ImagePlaceholderWidget extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(8)),
         child: Ink(
           width: width ?? 130,
-          height: height ?? 100,
+          height: height ?? 110,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
