@@ -12,5 +12,5 @@ class AppColors {
 
   //Textfield Color
   static const Color textFieldHintColor = Color(0xff949494);
-  static const Color textFieldFillColor = Color(0xffF9F9F9);
+  static final Color textFieldFillColor = Colors.blueGrey.withOpacity(0.2);
 }

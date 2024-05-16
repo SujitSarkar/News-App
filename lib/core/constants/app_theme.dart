@@ -10,7 +10,7 @@ class AppThemes {
           seedColor: AppColors.primaryColor, primary: AppColors.primaryColor),
       scaffoldBackgroundColor: AppColors.backgroundColor,
       textSelectionTheme:
-          const TextSelectionThemeData(cursorColor: Colors.white),
+          const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
       appBarTheme: const AppBarTheme(
           backgroundColor: AppColors.backgroundColor,
           iconTheme: IconThemeData(color: AppColors.primaryColor)),

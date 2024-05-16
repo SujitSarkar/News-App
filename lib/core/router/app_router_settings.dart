@@ -20,11 +20,12 @@ class GeneratedRoute {
       case AppRouter.newsDetails:
         return PageRouteBuilder(
             settings: settings,
-            transitionsBuilder: slideTransition,
+            transitionsBuilder: fadeTransition,
             pageBuilder: (_, animation, secondaryAnimation) {
               final args = settings.arguments as NewsDetailsScreen;
               return NewsDetailsScreen(
                 newsModel: args.newsModel,
+                fromPage: args.fromPage,
               );
             });
 
