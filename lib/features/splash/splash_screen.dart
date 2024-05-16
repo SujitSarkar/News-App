@@ -1,12 +1,25 @@
 import 'package:animation_wrappers/animation_wrappers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import '../../core/constants/app_assets.dart';
 import '../../core/router/app_router.dart';
 import '../../core/router/router_imports.dart';
+import '../account/data/account_service.dart';
+import '../account/presentation/controllers/account_controller.dart';
+import '../bookmark/data/bookmark_service.dart';
+import '../bookmark/presentation/controllers/bookmark_controller.dart';
+import '../news/data/news_service.dart';
+import '../news/presentation/controllers/news_controller.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
+
+  void dependencyInjection() {
+    Get.put(NewsController(NewsService()));
+    Get.put(AccountController(AccountService()));
+    Get.put(BookmarkController(BookmarkService()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +37,7 @@ class SplashScreen extends StatelessWidget {
                 fit: BoxFit.fitWidth,
                 onLoaded: (p0) async {
                   debugPrint(p0.duration.inSeconds.toString());
+                  dependencyInjection();
                   await Future.delayed(const Duration(milliseconds: 2950))
                       .then((value) {
                     pushAndRemoveUntil(AppRouter.home);

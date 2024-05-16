@@ -31,7 +31,7 @@ class SolidButton extends StatelessWidget {
                     width ?? MediaQuery.of(context).size.width, height ?? 44),
                 shape: RoundedRectangleBorder(
                     borderRadius: borderRadius ??
-                        const BorderRadius.all(Radius.circular(11))))
+                        const BorderRadius.all(Radius.circular(50))))
             .copyWith(
                 overlayColor: splashColor ??
                     MaterialStateProperty.all(Colors.white.withOpacity(0.5))),
