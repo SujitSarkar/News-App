@@ -1,4 +1,4 @@
-part of 'widgets_imports.dart';
+part of 'widget_imports.dart';
 
 class LogInRequiredWidget extends StatelessWidget {
   const LogInRequiredWidget({super.key});

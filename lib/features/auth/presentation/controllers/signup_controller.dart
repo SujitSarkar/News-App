@@ -34,6 +34,10 @@ class SignupController extends GetxController {
       showToast('Password does not match');
       return;
     }
+    if (isLoading.value) {
+      showToast('Another process running');
+      return;
+    }
     isLoading(true);
     await _authService
         .signup(
