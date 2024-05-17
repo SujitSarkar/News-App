@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/home/home_screen.dart';
-import '../../features/auth/presentation/screens/login_screen.dart';
-import '../../features/auth/presentation/screens/signup_screen.dart';
-import '../../features/news/presentation/screens/news_details_screen.dart';
-import '../../features/news/presentation/screens/news_screen.dart';
+import '../../features/auth/presentation/screens/screen_imports.dart';
+import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/news/presentation/screens/screen_imports.dart';
+import '../../features/read_more/presentation/screens/widget_imports.dart';
 import '../../features/splash/splash_screen.dart';
 import 'app_router.dart';
 part 'app_router_settings.dart';

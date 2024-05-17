@@ -28,6 +28,16 @@ class GeneratedRoute {
                 fromPage: args.fromPage,
               );
             });
+      case AppRouter.readMore:
+        return PageRouteBuilder(
+            settings: settings,
+            transitionsBuilder: slideTransition,
+            pageBuilder: (_, animation, secondaryAnimation) {
+              final args = settings.arguments as ReadMoreScreen;
+              return ReadMoreScreen(
+                url: args.url,
+              );
+            });
 
       case AppRouter.login:
         return PageRouteBuilder(

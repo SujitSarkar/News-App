@@ -1,4 +1,4 @@
-part of 'widgets_imports.dart';
+part of 'widget_imports.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
   const TextFormFieldWidget(

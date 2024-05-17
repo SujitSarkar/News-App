@@ -1,4 +1,4 @@
-part of 'widgets_imports.dart';
+part of 'widget_imports.dart';
 
 class ImagePlaceholderWidget extends StatelessWidget {
   const ImagePlaceholderWidget({super.key, this.height, this.width});

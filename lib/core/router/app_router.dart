@@ -4,4 +4,5 @@ class AppRouter {
   static const String login = '/login';
   static const String signup = '/signup';
   static const String newsDetails = '/news-details';
+  static const String readMore = '/read-more';
 }

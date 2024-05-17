@@ -21,12 +21,11 @@ dependencies:
   cached_network_image: ^3.3.1
   intl: ^0.18.1
   lottie: ^3.1.1
-  animation_wrappers: ^3.0.0
   uuid: ^4.4.0
-  url_launcher: ^6.2.6
   flutter_slidable: ^3.1.0
   get_storage: ^2.1.1
   connectivity_plus: ^6.0.3
+  flutter_inappwebview: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -38,6 +37,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/lotties/
+    # - assets/app_ss/
   #   - images/a_dot_ham.jpeg
   # example:
   # fonts:

@@ -1,4 +1,4 @@
-part of 'widgets_imports.dart';
+part of 'widget_imports.dart';
 
 class ListRefreshIndicator extends StatelessWidget {
   const ListRefreshIndicator(

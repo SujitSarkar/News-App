@@ -1,8 +1,9 @@
-part of 'widgets_imports.dart';
+part of 'widget_imports.dart';
 
 class LoadingWidget extends StatelessWidget {
-  const LoadingWidget({super.key, this.color});
+  const LoadingWidget({super.key, this.color, this.value});
   final Color? color;
+  final double? value;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class LoadingWidget extends StatelessWidget {
         child: kIsWeb || Platform.isAndroid
             ? CircularProgressIndicator(
                 color: color ?? AppColors.primaryColor,
+                value: value,
               )
             : Platform.isIOS
                 ? CupertinoActivityIndicator(
