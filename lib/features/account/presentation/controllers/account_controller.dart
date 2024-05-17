@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:news_app/shared/utils/app_toast.dart';
 import '../../../../features/account/domain/model/user_model.dart';
 import '../../../auth/data/auth_service.dart';
 import '../../data/account_service.dart';
@@ -38,6 +39,10 @@ class AccountController extends GetxController {
 
   Future<void> getUser() async {
     if (isUserLoggedIn.value) {
+      if (isLoading.value) {
+        showToast('Another process running');
+        return;
+      }
       isLoading(true);
       await _accountService.getCurrentUser().then((value) {
         if (value != null) {
@@ -49,6 +54,10 @@ class AccountController extends GetxController {
   }
 
   Future<void> logout(BuildContext context) async {
+    if (functionLoading.value) {
+      showToast('Another process running');
+      return;
+    }
     functionLoading(true);
     await AuthService.instance.logout(context).then((value) {
       if (value) {

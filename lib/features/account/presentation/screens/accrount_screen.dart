@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../core/constants/app_color.dart';
-import '../../../../shared/widgets/widgets_imports.dart';
+import '../../../../shared/widgets/widget_imports.dart';
 import '../controllers/account_controller.dart';
 
 class AccountScreen extends StatelessWidget {
