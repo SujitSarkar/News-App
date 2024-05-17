@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../shared/widgets/widgets_imports.dart';
+import '../../../../shared/widgets/widget_imports.dart';
 import '../../../account/presentation/controllers/account_controller.dart';
 import '../../../news/domain/model/news_model.dart';
 import '../controllers/bookmark_controller.dart';
