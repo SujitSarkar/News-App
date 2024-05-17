@@ -11,8 +11,8 @@ class LogInRequiredWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'No user found! Please login',
-            style: Theme.of(context).textTheme.bodyMedium,
+            'No account found! Please login',
+            style: Theme.of(context).textTheme.bodyLarge,
           ).paddingSymmetric(horizontal: 16, vertical: 12),
           SolidButton(
               width: 120,
