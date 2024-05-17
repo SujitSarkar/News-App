@@ -40,6 +40,10 @@ class NewsController extends GetxController {
   Future<void> saveBookmark({required NewsModel newsModel}) async {
     final currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser != null) {
+      if (functionLoading.value) {
+        showToast('Another process running');
+        return;
+      }
       functionLoading(true);
       await BookmarkService.instance
           .isBookmarkExists(urlToImage: newsModel.urlToImage!)

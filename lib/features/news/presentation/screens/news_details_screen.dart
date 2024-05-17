@@ -1,17 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:feather_icons/feather_icons.dart';
-import 'package:flutter/Material.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../../../../shared/utils/open_url.dart';
-import '../../../../core/constants/app_color.dart';
-import '../../../../core/router/router_imports.dart';
-import '../../../../shared/widgets/widgets_imports.dart';
-import '../../domain/model/news_model.dart';
-import '../controllers/news_controller.dart';
-import '../widgets/news_meta_data_widget.dart';
-import '../widgets/news_tile.dart';
+part of 'screen_imports.dart';
 
 class NewsDetailsScreen extends StatelessWidget {
   const NewsDetailsScreen(
@@ -27,8 +14,10 @@ class NewsDetailsScreen extends StatelessWidget {
         backgroundColor: AppColors.primaryColor.withOpacity(0.5),
         child: IconButton(
             onPressed: () => popScreen(),
-            icon: const Icon(
-              FeatherIcons.arrowLeft,
+            icon: Icon(
+              !kIsWeb && Platform.isIOS
+                  ? CupertinoIcons.back
+                  : FeatherIcons.arrowLeft,
               color: Colors.white,
             )),
       ),
@@ -95,7 +84,9 @@ class NewsDetailsScreen extends StatelessWidget {
                     style: const TextStyle(color: AppColors.secondaryColor),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchInAppWebView(url: newsModel.url!);
+                        pushTo(AppRouter.readMore,
+                            arguments:
+                                ReadMoreScreen(url: newsModel.url ?? ''));
                       }),
               ],
             ),

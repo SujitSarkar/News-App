@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../../../../shared/widgets/widgets_imports.dart';
-import '../../../../core/constants/app_string.dart';
-import '../controllers/news_controller.dart';
-import '../widgets/news_tile.dart';
+part of 'screen_imports.dart';
 
 class NewsScreen extends StatelessWidget {
   const NewsScreen({super.key});

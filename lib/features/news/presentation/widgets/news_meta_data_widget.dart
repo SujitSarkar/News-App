@@ -1,8 +1,4 @@
-import 'package:flutter/Material.dart';
-import 'package:get/get_utils/get_utils.dart';
-import 'package:intl/intl.dart';
-import '../../../../core/constants/app_color.dart';
-import '../../domain/model/news_model.dart';
+part of 'widget_imports.dart';
 
 class NewsMetaDataWidget extends StatelessWidget {
   const NewsMetaDataWidget({super.key, required this.newsModel});
