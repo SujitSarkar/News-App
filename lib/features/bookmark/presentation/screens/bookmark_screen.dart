@@ -15,7 +15,7 @@ class BookmarkScreen extends StatelessWidget {
     final BookmarkController bookmarkController = Get.find();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bookmarks'),
+        title: const Text('Bookmark'),
         centerTitle: true,
       ),
       body: Obx(() => accountController.isUserLoggedIn.value
